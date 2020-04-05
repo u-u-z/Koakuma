@@ -12,5 +12,15 @@
             "background.js"
         ],
         "persistent": false
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.bilibili.com/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
 }
