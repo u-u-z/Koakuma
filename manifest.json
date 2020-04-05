@@ -19,7 +19,7 @@
                 "*://www.bilibili.com/*"
             ],
             "js": [
-                "content-script.js"
+                "content-scripts.js"
             ]
         }
     ]
