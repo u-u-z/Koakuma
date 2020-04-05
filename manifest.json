@@ -5,7 +5,7 @@
     "manifest_version": 2,
     "browser_action": {
         "default_popup": "main.html",
-        "default_icon": "koakuma.png"
+        "default_icon": "128.png"
     },
     "background": {
         "scripts": [
@@ -29,6 +29,8 @@
         "tabs",
         "http://*/*",
         "https://*/*",
-        "storage"
+        "*://www.bilibili.com/*",
+        "*://*.youtube.com/*",
+        "*://*.nicovideo.jp/*"
     ]
 }
