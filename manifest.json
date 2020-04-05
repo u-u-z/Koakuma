@@ -1,0 +1,16 @@
+{
+    "name": "Koakuma",
+    "description": "A helper for PatchyVideo, determine if the video already exists.",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "main.html",
+        "default_icon": "default-icon.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    }
+}
