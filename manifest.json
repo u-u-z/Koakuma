@@ -16,7 +16,9 @@
     "content_scripts": [
         {
             "matches": [
-                "*://www.bilibili.com/*"
+                "*://www.bilibili.com/*",
+                "*://*.youtube.com/*",
+                "*://*.nicovideo.jp/*"
             ],
             "js": [
                 "content-script.js"
