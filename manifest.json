@@ -19,8 +19,13 @@
                 "*://www.bilibili.com/*"
             ],
             "js": [
-                "content-scripts.js"
+                "content-script.js"
             ]
         }
+    ],
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
     ]
 }

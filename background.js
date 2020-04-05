@@ -1,12 +1,12 @@
 const patchVideoUrl = "https://patchyvideo.com/be/getvideo_url.do"
 
-const updateBadge = (status) => {
+const updateBadge = (status, tabId) => {
   if (status) {
-    chrome.browserAction.setBadgeText({ text: '有了' });
-    chrome.browserAction.setBadgeBackgroundColor({ color: [0, 255, 0, 255] });
+    chrome.browserAction.setBadgeText({ text: '有了', tabId: tabId });
+    chrome.browserAction.setBadgeBackgroundColor({ color: [0, 255, 0, 255], tabId: tabId });
   } else {
-    chrome.browserAction.setBadgeText({ text: '没有' });
-    chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });
+    chrome.browserAction.setBadgeText({ text: '没有', tabId: tabId });
+    chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255], tabId: tabId });
   }
 }
 
@@ -27,10 +27,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           .then(response => response.json())
           .then(data => {
             if (data.status == "SUCCEED") {
-              updateBadge(true)
+              updateBadge(true, sender.tab.id)
               sendResponse(true)
             } else {
-              updateBadge(false)
+              updateBadge(false, sender.tab.id)
               sendResponse(false)
             }
           })
